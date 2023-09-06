@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -59,8 +56,8 @@ public class Main {
         }
 
         Park park = new Park();
-        park.addAttraction("10:00 - 22:00", 350);
-        park.addAttraction("10:00 - 21:00", 300);
+        park.addAttraction("Вихрь", "10:00 - 22:00", 350);
+        park.addAttraction("Бумеранг", "10:00 - 21:00", 300);
 
         System.out.println(park);
     }

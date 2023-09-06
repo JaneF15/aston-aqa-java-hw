@@ -9,8 +9,8 @@ public class Park {
         this.attractions = new ArrayList<>();
     }
 
-    public void addAttraction(String openingHours, double price) {
-        attractions.add(new Attraction(openingHours, price));
+    public void addAttraction(String name, String openingHours, double price) {
+        attractions.add(new Attraction(name, openingHours, price));
     }
 
     @Override
@@ -22,10 +22,12 @@ public class Park {
 
     public class Attraction {
 
+        private String name;
         private String openingHours;
         private double price;
 
-        public Attraction(String openingHours, double price) {
+        public Attraction(String name, String openingHours, double price) {
+            this.name = name;
             this.openingHours = openingHours;
             this.price = price;
         }
@@ -33,7 +35,8 @@ public class Park {
         @Override
         public String toString() {
             return "Attraction{" +
-                    "openingHours='" + openingHours + '\'' +
+                    "name='" + name + '\'' +
+                    ", openingHours='" + openingHours + '\'' +
                     ", price=" + price +
                     '}';
         }
