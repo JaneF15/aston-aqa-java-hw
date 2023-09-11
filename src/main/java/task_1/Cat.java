@@ -1,6 +1,7 @@
 package task_1;
 
 import org.jetbrains.annotations.NotNull;
+import task_1.iface.Eatable;
 
 public class Cat extends Animal implements Eatable {
 

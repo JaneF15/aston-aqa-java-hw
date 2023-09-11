@@ -1,5 +1,8 @@
 package task_1;
 
+import task_1.iface.Runnable;
+import task_1.iface.Swimmable;
+
 public class Animal implements Runnable, Swimmable {
 
     protected String name;
