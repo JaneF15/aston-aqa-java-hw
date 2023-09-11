@@ -17,7 +17,7 @@ public class Dog extends Animal {
         if (obstacleLength <= maxRunningDistance) {
             super.run(obstacleLength);
         } else {
-            System.out.println(name + " не умеет бегать на дистанцию более" + maxRunningDistance + " м.");
+            System.out.println(name + " не умеет бегать на дистанцию более " + maxRunningDistance + " м.");
         }
     }
 
@@ -26,7 +26,7 @@ public class Dog extends Animal {
         if (obstacleLength <= maxSwimmingDistance) {
             super.swim(obstacleLength);
         } else {
-            System.out.println(name + " не умеет плавать на дистанцию более" + maxSwimmingDistance + " м.");
+            System.out.println(name + " не умеет плавать на дистанцию более " + maxSwimmingDistance + " м.");
         }
 
     }
