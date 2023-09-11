@@ -18,6 +18,10 @@ public class Cat extends Animal implements Eatable {
         countCat++;
     }
 
+    public static int getCountCat() {
+        return countCat;
+    }
+
     @Override
     public void run(int obstacleLength) {
         if (obstacleLength <= maxRunningDistance) {

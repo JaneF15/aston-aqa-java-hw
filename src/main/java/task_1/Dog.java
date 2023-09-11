@@ -12,6 +12,10 @@ public class Dog extends Animal {
         countDog++;
     }
 
+    public static int getCountDog() {
+        return countDog;
+    }
+
     @Override
     public void run(int obstacleLength) {
         if (obstacleLength <= maxRunningDistance) {

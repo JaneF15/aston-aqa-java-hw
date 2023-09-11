@@ -12,6 +12,10 @@ public class Animal implements Runnable, Swimmable {
         countAnimal++;
     }
 
+    public static int getCountAnimal() {
+        return countAnimal;
+    }
+
     @Override
     public void run(int obstacleLength) {
         System.out.println(name + " пробежал " + obstacleLength + " м.");
