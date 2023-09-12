@@ -2,17 +2,30 @@ package task_2;
 
 import task_2.iface.HasMetrics;
 
-public class Triangle extends ColoredFigure implements HasMetrics {
+public class Triangle extends ColoredFigure {
 
     private int a;
     private int b;
     private int c;
 
     public Triangle(int a, int b, int c) {
-        super(Color.GREEN, Color.YELLOW);
         this.a = a;
         this.b = b;
         this.c = c;
+        initMetrics(a, b, c);
+    }
+
+    public Triangle(int a, int b, int c, Color backgroundColor, Color borderColor) {
+        super(backgroundColor, borderColor);
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        initMetrics(a, b, c);
+    }
+
+    private void initMetrics(int a, int b, int c) {
+        perimeter = HasMetrics.getPerimeter(a, b, c);
+        area = getArea();
     }
 
     public int getA() {
@@ -47,10 +60,10 @@ public class Triangle extends ColoredFigure implements HasMetrics {
 
     @Override
     public String toString() {
-        return "[ " + HasMetrics.getPerimeter(a, b, c) +
-                ", " + getArea() +
-                ", " + getBackgroundColor() +
-                ", " + getBorderColor() +
+        return "[ " + perimeter +
+                ", " + area +
+                ", " + backgroundColor +
+                ", " + borderColor +
                 " ]";
     }
 

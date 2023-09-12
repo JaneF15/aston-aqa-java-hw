@@ -2,13 +2,24 @@ package task_2;
 
 import task_2.iface.HasMetrics;
 
-public class Circle extends ColoredFigure implements HasMetrics {
+public class Circle extends ColoredFigure {
 
     private int radius;
 
     public Circle(int radius) {
-        super(Color.BLUE, Color.RED);
         this.radius = radius;
+        initMetrics(radius);
+    }
+
+    public Circle(int radius, Color backgroundColor, Color borderColor) {
+        super(backgroundColor, borderColor);
+        this.radius = radius;
+        initMetrics(radius);
+    }
+
+    private void initMetrics(int radius) {
+        perimeter = HasMetrics.getPerimeter(radius);
+        area = getArea();
     }
 
     public int getRadius() {
@@ -26,10 +37,10 @@ public class Circle extends ColoredFigure implements HasMetrics {
 
     @Override
     public String toString() {
-        return "[ " + HasMetrics.getPerimeter(radius) +
-                ", " + getArea() +
-                ", " + getBackgroundColor() +
-                ", " + getBorderColor() +
+        return "[ " + perimeter +
+                ", " + area +
+                ", " + backgroundColor +
+                ", " + borderColor +
                 " ]";
     }
 }

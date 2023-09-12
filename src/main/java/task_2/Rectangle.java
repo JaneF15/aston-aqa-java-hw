@@ -2,15 +2,26 @@ package task_2;
 
 import task_2.iface.HasMetrics;
 
-public class Rectangle extends ColoredFigure implements HasMetrics {
+public class Rectangle extends ColoredFigure {
 
     private int width;
     private int length;
 
     public Rectangle(int width, int length) {
-        super();
         this.width = width;
         this.length = length;
+        initMetrics(width, length);
+    }
+
+    public Rectangle(int width, int length, Color backgroundColor, Color borderColor) {
+        super(backgroundColor, borderColor);
+        this.width = width;
+        this.length = length;
+    }
+
+    private void initMetrics(int width, int length) {
+        perimeter = HasMetrics.getPerimeter(width, length);
+        area = getArea();
     }
 
     public int getWidth() {
@@ -36,10 +47,10 @@ public class Rectangle extends ColoredFigure implements HasMetrics {
 
     @Override
     public String toString() {
-        return "[ " + HasMetrics.getPerimeter(width, length) +
-                ", " + getArea() +
-                ", " + getBackgroundColor() +
-                ", " + getBorderColor() +
+        return "[ " + perimeter +
+                ", " + area +
+                ", " + backgroundColor +
+                ", " + borderColor +
                 " ]";
     }
 }

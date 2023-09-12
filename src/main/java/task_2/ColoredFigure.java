@@ -2,10 +2,10 @@ package task_2;
 
 import task_2.iface.Colored;
 
-public class ColoredFigure implements Colored {
+abstract public class ColoredFigure extends Figure implements Colored {
 
-    private Color backgroundColor;
-    private Color borderColor;
+    protected Color backgroundColor;
+    protected Color borderColor;
 
     public ColoredFigure() {
         this.backgroundColor = Color.WHITE;
@@ -36,4 +36,7 @@ public class ColoredFigure implements Colored {
     public void setBorderColor(Color borderColor) {
         this.borderColor = borderColor;
     }
+
+    abstract public double getArea();
+
 }
