@@ -9,10 +9,6 @@ public class Park {
         this.attractions = new ArrayList<>();
     }
 
-    public void addAttraction(String name, String openingHours, double price) {
-        attractions.add(new Attraction(name, openingHours, price));
-    }
-
     @Override
     public String toString() {
         return "Park{" +
@@ -30,6 +26,8 @@ public class Park {
             this.name = name;
             this.openingHours = openingHours;
             this.price = price;
+
+            attractions.add(this);
         }
 
         @Override

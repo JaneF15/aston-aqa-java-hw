@@ -56,8 +56,8 @@ public class Main {
         }
 
         Park park = new Park();
-        park.addAttraction("Вихрь", "10:00 - 22:00", 350);
-        park.addAttraction("Бумеранг", "10:00 - 21:00", 300);
+        park.new Attraction("Вихрь", "10:00 - 22:00", 350);
+        park.new Attraction("Бумеранг", "10:00 - 21:00", 300);
 
         System.out.println(park);
     }
