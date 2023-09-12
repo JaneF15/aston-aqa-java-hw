@@ -4,5 +4,5 @@ import task_1.Plate;
 
 public interface Eatable {
 
-    public void eat(int food, Plate plate);
+    void eat(int food, Plate plate);
 }

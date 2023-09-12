@@ -9,13 +9,9 @@ public class FigureApp {
         Rectangle rectangle = new Rectangle(4, 5);
         Triangle triangle = new Triangle(3, 4, 5);
 
-        System.out.println(HasMetrics.getPerimeter(circle.radius));
-        System.out.println(HasMetrics.getPerimeter(rectangle.width, rectangle.length));
-        System.out.println(HasMetrics.getPerimeter(triangle.a, triangle.b, triangle.c));
-        System.out.println("--------------------------------------------------------");
-        System.out.println(circle.getArea());
-        System.out.println(rectangle.getArea());
-        System.out.println(triangle.getArea());
+        System.out.println(circle);
+        System.out.println(rectangle);
+        System.out.println(triangle);
 
     }
 }

@@ -5,7 +5,7 @@ import task_1.iface.Eatable;
 
 public class Cat extends Animal implements Eatable {
 
-    public boolean satiety;
+    private boolean satiety;
     private static int countCat = 0;
 
     public Cat(String name) {
@@ -21,6 +21,10 @@ public class Cat extends Animal implements Eatable {
 
     public static int getCountCat() {
         return countCat;
+    }
+
+    public boolean isSatiety() {
+        return satiety;
     }
 
     @Override

@@ -16,7 +16,7 @@ public class AnimalApp {
         int food = 8;
         for (Cat cat : cats) {
             cat.eat(food++, plate);
-            System.out.println(cat.satiety);
+            System.out.println(cat.isSatiety());
         }
 
         System.out.println("В тарелке осталось " + plate.getFood() + " еды.");
