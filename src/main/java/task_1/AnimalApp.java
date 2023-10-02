@@ -10,6 +10,10 @@ public class AnimalApp {
         cats[2] = new Cat("Снежок");
         cats[3] = new Cat("Мурзик");
         cats[4] = new Cat("Филя");
+        System.out.println("Создано кошек: " + Cat.getCountCat());
+
+        cats[3].run(200);
+        cats[4].swim(1);
 
         Plate plate = new Plate(33);
 
@@ -20,6 +24,17 @@ public class AnimalApp {
         }
 
         System.out.println("В тарелке осталось " + plate.getFood() + " еды.");
+        System.out.println("----------------------------------------------------");
+
+        Dog bobik = new Dog("Бобик");
+        Dog rich = new Dog("Рич");
+        System.out.println("Создано собак: " + Dog.getCountDog());
+
+        bobik.run(600);
+        rich.swim(4);
+
+        System.out.println("----------------------------------------------------");
+        System.out.println("Создано животных: " + Dog.getCountAnimal());
     }
 
 }

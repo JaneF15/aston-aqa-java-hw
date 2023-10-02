@@ -41,7 +41,7 @@ public class Cat extends Animal implements Eatable {
         if (obstacleLength <= maxSwimmingDistance) {
             super.run(obstacleLength);
         } else {
-            System.out.println(name + " не умеет плавать на дистанцию более " + maxSwimmingDistance + " м.");
+            System.out.println(name + " не умеет плавать");
         }
     }
 
